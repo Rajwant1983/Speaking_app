@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{student.student_name}}</title>
+</head>
+<body>
+    <p>{{student.country}}</p>
+    <p>{{student.native_language}}</p>
+    <p>All languages</p>
+    <table>
+        <thead>
+            <tr>
+                <th style="border: 1px solid black">Student name</th>
+                <th style="border: 1px solid black">Language Name</th>
+                <th style="border: 1px solid black">Native language</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for language in list_of_languages %}
+            <tr>
+                <td style="border: 1px solid black">{{language.student_name}}</td>
+                <td style="border: 1px solid black">{{language.language_name}}</td>
+                <td style="border: 1px solid black">{{language.native_language}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+</body>
+</html>
